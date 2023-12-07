@@ -1,0 +1,264 @@
+/* NewPage.css */
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/bolt.css');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* YourComponent.css */
+
+.php .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .php .grid-item1 {
+    background-color: transparent;
+    padding: 20px;
+  }
+
+  .php .grid-item2 {
+    background-color: transparent;
+    padding: 20px;
+  }
+  
+  .php .grid-item2 img {
+    position: relative;
+    left: 5rem;
+    top: 6rem;
+    scale: 1.4;
+    z-index: -1;
+  }
+
+  .php .grid .grid-item1 h1 {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: left;
+    color: #5F6A6A;
+  }
+
+  .php .grid .grid-item1 p {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: left;
+    color: #95A5A6;
+    padding-right: 3rem;
+  }
+
+
+
+
+
+  .php .grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  gap: 1rem;
+  background: transparent;
+  width: 50vw;
+  padding-top: 6rem;
+}
+
+.php .buttonlist {
+  width: auto;
+  height: 5vh;
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  margin: auto;
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+.php .buttonlist .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.php .buttonlist .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.php .buttonlist .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.php .buttonlist:hover {
+  background-color: var(--hover-color);
+}
+
+.php .buttonlist:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.php .buttonlist:hover .arrow:before {
+  right: 0;
+}
+
+
+
+
+.php .buttong1 {
+  position: relative;
+  display: flex;
+  margin-top: 6rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+ }
+ 
+ .php .buttong1:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #FFD401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+ }
+ 
+ .php .buttong1:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+ }
+ 
+ .php .buttong1 span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .php .buttong1:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+ }
+ 
+ @keyframes scaleUp {
+  0% {
+   transform: scale(1);
+  }
+ 
+  50% {
+   transform: scale(0.95);
+  }
+ 
+  100% {
+   transform: scale(1);
+  }
+ }
+ 
+
+
+
+
+ .php .arrowposition {
+  position: relative;
+  height: 10vh;
+}
+
+.php .arrowposition .arrow {
+  cursor: pointer;
+  position: absolute;
+  height: 60px;
+  left: 2rem;
+  top: 2.5rem;
+  transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  transition: transform 0.1s;
+  width: 20px;
+}
+
+.php .arrowposition .arrow-top, .arrow-bottom {
+  background-color: #95A5A6;
+  height: 4px;
+  left: -5px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.php .arrowposition .arrow-top:after, .arrow-bottom:after {
+  background-color: #f65050;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.15s;
+}
+
+.php .arrowposition .arrow-top {
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+.php .arrowposition .arrow-top:after {
+  left: 100%;
+  right: 0;
+  transition-delay: 0s;
+}
+
+.php .arrowposition .arrow-bottom {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+
+.php .arrowposition .arrow-bottom:after {
+  left: 0;
+  right: 100%;
+  transition-delay: 0.15s;
+}
+
+.php .arrowposition .arrow:hover .arrow-top:after {
+  left: 0;
+  transition-delay: 0.15s;
+}
+
+.php .php .arrowposition .arrow:hover .arrow-bottom:after {
+  right: 0;
+  transition-delay: 0s;
+}
+
+.php .arrowposition .arrow:active {
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
+}
