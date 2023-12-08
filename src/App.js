@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom"
 
 import Home from './components/Home'
 import LandPagePHP from './components/LandPagePHP';
+import ArticlePage1 from './components/Artikel/ArticlePage1';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
          <Route>
 
           <Route path="/easmultimedia" element={<Home/>} />
-          <Route path="/phplanding" element={<LandPagePHP/>} />
-            
+          <Route path="/easmultimedia/phplanding" element={<LandPagePHP/>} />
+          <Route path="/easmultimedia/phplanding/tutorial1" element={<ArticlePage1/>} />
+
          </Route>
        </Routes>
      </BrowserRouter>

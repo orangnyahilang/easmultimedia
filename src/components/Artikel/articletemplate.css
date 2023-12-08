@@ -1,0 +1,23 @@
+/* ArticleTemplate.css */
+
+.article-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.article-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.article-info {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.article-content {
+  line-height: 1.6;
+}
+
+/* Tambahkan styling sesuai kebutuhan Anda */

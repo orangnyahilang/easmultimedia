@@ -202,7 +202,7 @@
   transition: all 0.3s ease-in-out;
  }
  
- .php .buttong1:hover span {
+ .php .buttong1:hover .php span {
   color: #183153;
   animation: scaleUp 0.3s ease-in-out;
  }
@@ -241,7 +241,7 @@
   width: 20px;
 }
 
-.php .arrowposition .arrow-top, .arrow-bottom {
+.php .arrowposition .arrow-top, .php .arrow-bottom {
   background-color: #95A5A6;
   height: 4px;
   left: -5px;
@@ -250,7 +250,7 @@
   width: 100%;
 }
 
-.php .arrowposition .arrow-top:after, .arrow-bottom:after {
+.php .arrowposition .arrow-top:after, .php .arrow-bottom:after {
   background-color: #f65050;
   content: "";
   height: 100%;
@@ -281,12 +281,12 @@
   transition-delay: 0.15s;
 }
 
-.php .arrowposition .arrow:hover .arrow-top:after {
+.php .arrowposition .arrow:hover .php .arrow-top:after {
   left: 0;
   transition-delay: 0.15s;
 }
 
-.php .php .arrowposition .arrow:hover .arrow-bottom:after {
+.php .arrowposition .arrow:hover .php .arrow-bottom:after {
   right: 0;
   transition-delay: 0s;
 }
@@ -329,7 +329,7 @@
 
 
 
-.gridelement1 {
+.php .gridelement1 {
   position: absolute;
   z-index: -2;
   top: 23rem;
@@ -339,20 +339,20 @@
 
 
 
-.ball3 {
+.php .ball3 {
   position: absolute;
   top: -0.5rem;
   left: 19.4rem;
   scale: 0.6;
 }
-.loader__balls {
+.php .loader__balls {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
-.loader__balls__group {
+.php .loader__balls__group {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -361,7 +361,7 @@
   height: 100px;
   width: 40px;
 }
-.ball {
+.php .ball {
   height: 20px;
   width: 20px;
   border-radius: 15px;
@@ -370,7 +370,7 @@
 }
 
 /* ANIMATION BALL 1*/
-.loader__balls__group :nth-child(1) {
+.php .loader__balls__group :nth-child(1) {
   background-color: #99e2d0;
   animation-name: jumpinBallAnimation1;
   animation-duration: 1000ms;
@@ -417,7 +417,7 @@
 }
 
 /* ANIMATION BALL 2*/
-.loader__balls__group :nth-child(2) {
+.php .loader__balls__group :nth-child(2) {
   background-color: #ff79da;
   animation-name: jumpinBallAnimation2;
   animation-duration: 1000ms;
@@ -464,7 +464,7 @@
 }
 
 /* ANIMATION BALL 3*/
-.loader__balls__group :nth-child(3) {
+.php .loader__balls__group :nth-child(3) {
   background-color: #a860ff;
   animation-name: jumpinBallAnimation3;
   animation-duration: 1000ms;
@@ -509,13 +509,13 @@
     transform: translateY(0) scale(1, 1);
   }
 }
-.loader__balls__group .item1 {
+.php .loader__balls__group .item1 {
   animation-delay: 0ms;
 }
-.loader__balls__group .item2 {
+.php .loader__balls__group .item2 {
   animation-delay: 100ms;
 }
-.loader__balls__group .item3 {
+.php .loader__balls__group .item3 {
   animation-delay: 200ms;
 }
 

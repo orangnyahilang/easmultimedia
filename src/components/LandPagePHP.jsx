@@ -3,6 +3,8 @@ import './landpage.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
+import bg1element from '../assets/images/bgelement1.png'
+import php from '../assets/images/php.png';
 
 function LandPagePHP() {
 
@@ -40,7 +42,7 @@ function LandPagePHP() {
         </div>
 
         <div className="grid-item2">
-        <img src="/assets/images/php.png" alt="Image Description" />
+        <img src={php} alt="" />
         </div>
     </div>
     <div className="bottom-arrow-container" onClick={handleClick}>
@@ -48,59 +50,66 @@ function LandPagePHP() {
     </div>    
     <div className='grid2' id='list'>
         <h1>Apa saja yang perlu dipelajari bagi pemula?</h1>
-    <div className='buttonlist'>
+      <Link to='tutorial1'>
+      <div className='buttonlist'>
           Pengenalan PHP
           <div class="arrow-wrapper">
               <div class="arrow"></div>
-
           </div>
       </div>
+      </Link>
+      <Link to='tutorial1'>
       <div className='buttonlist'>
           Panduan Pengguna
           <div class="arrow-wrapper">
               <div class="arrow"></div>
-
           </div>
       </div>
+      </Link>
+      <Link to='tutorial1'>
       <div className='buttonlist'>
           Referensi Fungsi
           <div class="arrow-wrapper">
               <div class="arrow"></div>
-
           </div>
       </div>
+      </Link>
+      <Link to='tutorial1'>
       <div className='buttonlist'>
           Pengelolaan Ekstensi
           <div class="arrow-wrapper">
               <div class="arrow"></div>
-
           </div>
       </div>
+      </Link>
+      <Link to='tutorial1'>
       <div className='buttonlist'>
           PDO (PNP Data Object)
           <div class="arrow-wrapper">
               <div class="arrow"></div>
-
           </div>
       </div>
+      </Link>
+      <Link to='tutorial1'>
       <div className='buttonlist'>
           OOP (Object Oriented Programming)
           <div class="arrow-wrapper">
               <div class="arrow"></div>
-
           </div>
       </div>
+      </Link>
+      <Link to='tutorial1'>
       <div className='buttonlist'>
           Pemrograman Web
           <div class="arrow-wrapper">
               <div class="arrow"></div>
-
           </div>
       </div>
+      </Link>
     </div>
 
     <div className='gridelement1'>
-    <img src="/assets/images/bgelement1.png" alt="Image Description" />
+    <img src={bg1element} />
     </div>
 
     <div className='ball3'>

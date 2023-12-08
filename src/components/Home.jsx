@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
+import bg1 from '../assets/images/bg1.png'
 
 const Home = () => {
   const [width, setWidth] = useState('0%'); // Set initial width to 0%
@@ -46,7 +47,7 @@ const Home = () => {
             <p>Pengembangan web dengan PHP dan MySQL adalah kombinasi kuat yang memungkinkan pembuatan aplikasi web dinamis</p>
           </div>
           <div className='btnarrow'>
-            <Link to='/phplanding'>
+            <Link to='/easmultimedia/phplanding'>
               <button class="learn-more">
               <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
@@ -63,7 +64,7 @@ const Home = () => {
           </div>
           <div className='avatar1'>
             <div class="flex items-center gap-4">
-                <img class="w-10 h-10 rounded-full" src="/assets/images/bg1.png" alt=""/>
+                <img class="w-10 h-10 rounded-full" src={bg1} alt=""/>
                 <div class="font-medium dark:text-black">
                     <div>Our Team's</div>
                     <div class="text-sm text-gray-500 dark:text-gray-400">Arya, Felix, Niko</div>
