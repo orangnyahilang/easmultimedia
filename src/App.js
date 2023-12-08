@@ -11,7 +11,7 @@ function App() {
        <Routes>
          <Route>
 
-          <Route path="/home" element={<Home/>} />
+          <Route path="/easmultimedia" element={<Home/>} />
           <Route path="/phplanding" element={<LandPagePHP/>} />
             
          </Route>
