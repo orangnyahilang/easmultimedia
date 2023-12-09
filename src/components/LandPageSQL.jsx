@@ -1,12 +1,12 @@
 import React from 'react';
-import './landpagePHP.css';
+import './landpageSQL.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
-import bg1element from '../assets/images/bgelement1.png'
-import php from '../assets/images/php.png';
+import bg1element from '../assets/images/bgelement2.png'
+import sql from '../assets/images/sql.png';
 
-function LandPagePHP() {
+function LandPageSQL() {
 
     const handleClick = () => {
         // Mengarahkan pengguna ke halaman dengan ID 'list'
@@ -17,7 +17,7 @@ function LandPagePHP() {
       };
     
   return (
-    <div className='php'>
+    <div className='sql'>
     <div className='arrowposition'>
         <Link to='/easmultimedia'>
         <div class="arrow">
@@ -29,10 +29,10 @@ function LandPagePHP() {
     <div className="grid">
         <div className="grid-item1">
 
-        <h1>Tutorial Dasar <span className='highlight-text-php'>PHP.</span></h1>
+        <h1>Tutorial Dasar <span className='highlight-text-sql'>MySQL.</span></h1>
         <p>
-        PHP merupakan bahasa pemrograman server-side yang kuat dan umum digunakan dalam pengembangan web. 
-        Digunakan untuk membuat halaman web dinamis dengan kemampuan mengakses dan mengelola data di server.
+        MySQL adalah sistem manajemen basis data (DBMS) yang luas digunakan untuk menyimpan, mengelola, dan mengakses data dalam aplikasi.
+        mencakup pemahaman tentang struktur tabel, manipulasi data, pertanyaan dan pemilihan data, pengelolaan indeks, transaksi, keamanan, optimasi kueri, dan penanganan error.
         </p>
         
         <div className='buttong1' onClick={handleClick}>
@@ -42,7 +42,8 @@ function LandPagePHP() {
         </div>
 
         <div className="grid-item2">
-        <img src={php} alt="" />
+          <div className='flow-overlaygrid'></div>
+          <img src={sql} alt="" /> 
         </div>
     </div>
     <div className="bottom-arrow-container" onClick={handleClick}>
@@ -114,25 +115,26 @@ function LandPagePHP() {
     </div>
 
     <div className='ball3'>
-        <div class="loader">
-          <div class="loader__balls">
-            <div class="loader__balls__group">
-              <div class="ball item1"></div>
-              <div class="ball item1"></div>
-              <div class="ball item1"></div>
-            </div>
-            <div class="loader__balls__group">
-              <div class="ball item2"></div>
-              <div class="ball item2"></div>
-              <div class="ball item2"></div>
-            </div>
-            <div class="loader__balls__group">
-              <div class="ball item3"></div>
-              <div class="ball item3"></div>
-              <div class="ball item3"></div>
-            </div>
-          </div>
-        </div>
+    <div class="loader">
+  <div class="loader__balls">
+    <div class="loader__balls__group">
+      <div class="ball item1"></div>
+      <div class="ball item1"></div>
+      <div class="ball item1"></div>
+    </div>
+    <div class="loader__balls__group">
+      <div class="ball item2"></div>
+      <div class="ball item2"></div>
+      <div class="ball item2"></div>
+    </div>
+    <div class="loader__balls__group">
+      <div class="ball item3"></div>
+      <div class="ball item3"></div>
+      <div class="ball item3"></div>
+    </div>
+  </div>
+</div>
+
     </div>
     
     <div class="typewriter">
@@ -162,9 +164,9 @@ function LandPagePHP() {
         </div>
       </section>
     </div>
-
+    
     </div>
   )
 }
 
-export default LandPagePHP;
+export default LandPageSQL;

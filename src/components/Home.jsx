@@ -1,6 +1,5 @@
 // HalamanUtama.jsx
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './style.css';
 import bg1 from '../assets/images/bg1.png'
 
@@ -47,20 +46,22 @@ const Home = () => {
             <p>Pengembangan web dengan PHP dan MySQL adalah kombinasi kuat yang memungkinkan pembuatan aplikasi web dinamis</p>
           </div>
           <div className='btnarrow'>
-            <Link to='/easmultimedia/phplanding'>
+            <a href='/easmultimedia/phplanding'>
               <button class="learn-more">
               <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
               </span>
               <span class="button-text">PHP</span>
               </button>
-            </Link>
+            </a>
+            <a href='/easmultimedia/sqllanding'>
             <button class="learn-more2">
               <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
               </span>
               <span class="button-text"> SQL</span>
             </button>
+            </a>
           </div>
           <div className='avatar1'>
             <div class="flex items-center gap-4">
