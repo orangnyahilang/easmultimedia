@@ -13,8 +13,8 @@ function App() {
        <Routes>
          <Route>
 
+          <Route path="/" element={<Home/>} />
           <Route path="/easmultimedia" element={<Home/>} />
-          
           <Route path="/easmultimedia/phplanding" element={<LandPagePHP/>} />
           <Route path="/easmultimedia/sqllanding" element={<LandPageSQL/>} />
           <Route path="/easmultimedia/phplanding/tutorial1" element={<ArticlePage1/>} />
