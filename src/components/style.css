@@ -533,7 +533,37 @@
     height: 80vh;
     z-index: 2;
   }
-  
-  
+  .container1 .grid1 {
+    position: relative;
+    height: auto;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+  .container1 .grid1 h1 {
+    font-size: 2rem;
+    color: #154360;
+    margin: 2rem 2rem 0 2rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 800;
+    text-align: right;
+    line-height: 1.2;
+  }
+  .container1 .grid2 {
+    position: relative;
+    height: auto;
+    padding-top: 100%;
+  }
+  .container1 .buttong2 {
+    display: none;
+  }
+  .container1 .cubesl {
+    position: absolute;
+    top: 85%;
+    right: 92%;
+    scale: 0.3;
+  }
+  .container1 .btnarrow button.learn-more {
+    left: 4rem;
+  }
   
  }

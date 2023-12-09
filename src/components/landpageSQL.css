@@ -1099,7 +1099,7 @@
     display: grid;
     grid-template-columns: 1fr;
     position: relative;
-    margin-bottom: 12rem;
+    margin-bottom: 16rem;
   }
 
   .sql .grid .grid-item1 h1 {
