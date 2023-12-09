@@ -46,7 +46,7 @@ const Home = () => {
             <p>Pengembangan web dengan PHP dan MySQL adalah kombinasi kuat yang memungkinkan pembuatan aplikasi web dinamis</p>
           </div>
           <div className='btnarrow'>
-            <a href='/easmultimedia/phplanding'>
+            <a href='/phplanding'>
               <button class="learn-more">
               <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
@@ -54,7 +54,7 @@ const Home = () => {
               <span class="button-text">PHP</span>
               </button>
             </a>
-            <a href='/easmultimedia/sqllanding'>
+            <a href='/sqllanding'>
             <button class="learn-more2">
               <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>

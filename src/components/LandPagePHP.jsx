@@ -15,11 +15,15 @@ function LandPagePHP() {
           listSection.scrollIntoView({ behavior: 'smooth' });
         }
       };
+
+      const handleBack = () => {
+        window.history.back();
+      };
     
   return (
     <div className='php'>
     <div className='arrowposition'>
-        <Link to='/easmultimedia'>
+        <Link onClick={handleBack}>
         <div class="arrow">
           <div class="arrow-top"></div>
           <div class="arrow-bottom"></div>

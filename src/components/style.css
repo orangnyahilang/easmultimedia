@@ -517,3 +517,23 @@
   scale: 0.7;
   line-height: 1;
  }
+
+
+
+
+ @media (min-width: 300px) and (max-width: 600px) {
+
+  .container1 {
+    position: relative;
+  }
+  .container1 .container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80vw;
+    height: 80vh;
+    z-index: 2;
+  }
+  
+  
+  
+ }

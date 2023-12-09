@@ -8,21 +8,19 @@ import ArticlePage1 from './components/Artikel/ArticlePage1';
 
 function App() {
   return (
-    <div className="App">
        <BrowserRouter>
+       <main>
        <Routes>
-         <Route>
 
           <Route path="/" element={<Home/>} />
-          <Route path="/easmultimedia" element={<Home/>} />
-          <Route path="/easmultimedia/phplanding" element={<LandPagePHP/>} />
-          <Route path="/easmultimedia/sqllanding" element={<LandPageSQL/>} />
-          <Route path="/easmultimedia/phplanding/tutorial1" element={<ArticlePage1/>} />
+          <Route path="/phplanding" element={<LandPagePHP/>} />
+          <Route path="/sqllanding" element={<LandPageSQL/>} />
+          <Route path="/phplanding/tutorial1" element={<ArticlePage1/>} />
+          <Route path="/sqllanding/tutorial1" element={<ArticlePage1/>} />
 
-         </Route>
        </Routes>
+       </main>
      </BrowserRouter>
-    </div>
   );
 }
 

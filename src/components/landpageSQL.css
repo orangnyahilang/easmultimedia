@@ -5,7 +5,8 @@
 /* YourComponent.css */
 
 .sql {
-
+    position: absolute;
+    overflow: hidden;
 }
 .sql .grid {
     display: grid;
@@ -169,7 +170,7 @@
 .sql .buttong1 {
   position: relative;
   display: flex;
-  margin-top: 6rem;
+  margin-top: 4rem;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -1082,4 +1083,186 @@
     transform: translateY(250px);
     filter: hue-rotate(180deg);
   }
+}
+
+
+
+
+
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .sql {
+    display: block;
+    position: relative;
+  }
+  .sql .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    margin-bottom: 12rem;
+  }
+
+  .sql .grid .grid-item1 h1 {
+    position: absolute;
+    white-space: initial;
+  }
+
+  .sql .grid .grid-item1 p {
+    position: absolute;
+    top: 10rem;
+  }
+
+  .sql .grid-item2 img {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    scale: 1;
+  }
+
+  .sql .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    gap: 0.8rem;
+    background: #c9dfed50;
+    width: 90vw;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0 1rem 0;
+    transition: all 1.5s ease ;
+    box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+  .sql .grid2 h1{
+    transition: all 0.2s ease-out;
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 0rem;
+    font-family: 'Catamaran', sans-serif;
+    position: relative;
+    text-align: center;
+  }
+
+  .sql .arrowposition .arrow {
+    z-index: 5;
+  }
+  
+  .sql .buttonlist {
+    width: 80%;
+    height: 5vh;
+    --primary-color: #8983ff;
+    --secondary-color: #fff;
+    --hover-color: #73C6B6;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 2rem;
+    color: var(--secondary-color);
+    margin: auto;
+    padding: 1em 1em;
+    background: var(--primary-color);
+    display: flex;
+    transition: all 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    font-weight: 300;
+  }
+
+  .sql .buttong1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    width: 90%;
+    top: 60%;
+   }
+
+   .sql .bottom-arrow-container {
+    position: absolute;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    top: 47%;
+    left: 49%;
+    width: 10%;
+  }
+   
+  .sql .gridelement1 {
+    position: absolute;
+    z-index: -2;
+    top: 52%;
+    left: 3rem;
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .sql .ball3 {
+    position: absolute;
+    top: 6%;
+    left: 1rem;
+    scale: 0.6;
+  }
+  
+  .sql .loader__balls__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    height: 15px;
+    top: 73rem;
+    left: 2.3rem;
+    width: 15px;
+  }
+  
+  .sql .loaderfourspell .slider {
+    overflow: hidden;
+    background-color: white;
+    margin: 0 15px;
+    height: 40px;
+    width: 20px;
+    border-radius: 30px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 30px #fff, inset -5px -5px 10px rgba(87, 87, 87, 0.2), inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .sql .arrowposition {
+    position: relative;
+    height: 5vh;
+  }
+
+  .sql .ploader {
+    position: absolute;
+    top: 96%;
+    right: 70%;
+    z-index: -5;
+    scale: 2;
+  }
+
+  .sql .typewriter {
+    --blue: #5C86FF;
+    --blue-dark: #275EFE;
+    --key: #fff;
+    --paper: #EEF0FD;
+    --text: #D3D4EC;
+    --tool: #FBC56C;
+    --duration: 3s;
+    position: absolute;
+    top: 51%;
+    left: 65%;
+    animation: bounce05 var(--duration) linear infinite;
+  }
+
+  
+  
 }

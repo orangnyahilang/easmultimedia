@@ -1093,21 +1093,28 @@
 @media (min-width: 300px) and (max-width: 600px) {
   .php {
     display: block;
-    width: 100vw;
-    overflow: hidden;
+    position: relative;
   }
   .php .grid {
     display: grid;
     grid-template-columns: 1fr;
-    height: auto;
-    overflow: hidden;
-    margin-bottom: 22rem;
+    position: relative;
+    margin-bottom: 12rem;
+  }
+
+  .php .grid .grid-item1 h1 {
+    position: absolute;
+  }
+
+  .php .grid .grid-item1 p {
+    position: absolute;
+    top: 10rem;
   }
 
   .php .grid-item2 img {
     position: absolute;
-    left: 0%;
-    top: 36%;
+    left: 0;
+    top: 35%;
     scale: 1;
   }
 
@@ -1133,6 +1140,12 @@
     font-size: 1rem;
     margin-bottom: 0rem;
     font-family: 'Catamaran', sans-serif;
+    position: relative;
+    text-align: center;
+  }
+
+  .php .arrowposition .arrow {
+    z-index: 5;
   }
   .php .buttonlist {
     width: 80%;
@@ -1158,9 +1171,7 @@
   }
 
   .php .buttong1 {
-    position: relative;
     display: flex;
-    margin-top: 15rem;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -1170,21 +1181,24 @@
     overflow: hidden;
     border: none;
     cursor: pointer;
+    position: absolute;
+    width: 90%;
+    top: 51%;
    }
 
    .php .bottom-arrow-container {
     position: absolute;
     cursor: pointer;
     animation: bounce 2s infinite;
-    top: 44.4rem;
-    left: 1rem;
-    right: 1rem;
+    top: 42.5%;
+    left: 49%;
+    width: 10%;
   }
    
   .php .gridelement1 {
     position: absolute;
     z-index: -2;
-    top: 45rem;
+    top: 47rem;
     left: 3rem;
     width: 80%;
     overflow: hidden;
@@ -1192,7 +1206,7 @@
 
   .php .ball3 {
     position: absolute;
-    top: -0.5rem;
+    top: 1.5rem;
     left: 1rem;
     scale: 0.6;
   }
@@ -1227,8 +1241,10 @@
 
   .php .ploader {
     position: absolute;
-    top: 77%;
-    right: -12%;
+    top: 96%;
+    right: 70%;
+    z-index: -5;
+    scale: 2;
   }
 
   .php .typewriter {
@@ -1240,7 +1256,7 @@
     --tool: #FBC56C;
     --duration: 3s;
     position: absolute;
-    top: 91%;
+    top: 51%;
     left: 65%;
     animation: bounce05 var(--duration) linear infinite;
   }
