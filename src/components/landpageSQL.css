@@ -98,6 +98,7 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-family: 'Catamaran', sans-serif;
+  text-align: center;
 }
 .sql .buttonlist {
   width: 80%;

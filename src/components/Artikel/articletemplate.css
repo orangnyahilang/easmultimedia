@@ -1,23 +1,177 @@
-/* ArticleTemplate.css */
-
 .article-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  background: #efefef;
+  font-family: 'Catamaran';
+  border-radius: 2rem;
 }
 
-.article-title {
-  font-size: 24px;
+.article-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.headerartikel {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.article-container h1 {
   margin-bottom: 10px;
 }
 
-.article-info {
-  color: #888;
-  margin-bottom: 20px;
+.meta {
+  color: #777;
+}
+
+.article-container img {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 3rem;
 }
 
 .article-content {
   line-height: 1.6;
+  padding: 2rem;
+  text-align: justify;
+  width: auto;
+  height: auto;
+  background-color: #D6DBDF;
+  border-radius: 3rem;
 }
 
-/* Tambahkan styling sesuai kebutuhan Anda */
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .article-container {
+    padding: 10px;
+  }
+
+  .headerartikel {
+    font-size: 1.5em;
+  }
+
+  .article-container img {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Customize styles further as needed */
+.article-container .loading-wave {
+  width: 20%;
+  height: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  bottom: 0%;
+  left: 82%;
+}
+
+.article-container .loading-bar {
+  width: 20px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #3498db;
+  border-radius: 5px;
+  animation: loading-wave-animation 1s ease-in-out infinite;
+}
+
+.article-container.loading-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.article-container .loading-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.article-container .loading-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes loading-wave-animation {
+  0% {
+    height: 10px;
+  }
+
+  50% {
+    height: 50px;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+
+
+
+
+
+.article-container .loader {
+  --dim: 2.6rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: absolute;
+  right: 9%;
+  top: 17%;
+  animation: spin988 2s linear infinite;
+}
+
+.article-container .loader .circle {
+  --color: #333;
+  --dim: 1rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.article-container .loader .circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.article-container .loader .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.article-container .loader .circle:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.article-container .loader .circle:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  20%, 25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+
+  45%, 50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  70%, 75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+
+  95%, 100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
