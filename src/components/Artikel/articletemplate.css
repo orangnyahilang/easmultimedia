@@ -36,6 +36,7 @@
 }
 
 .article-content {
+  position: relative;
   line-height: 1.6;
   padding: 2rem;
   text-align: justify;
@@ -43,6 +44,7 @@
   height: auto;
   background-color: #D6DBDF;
   border-radius: 3rem;
+  z-index: 1;
 }
 
 
@@ -73,6 +75,7 @@
   position: relative;
   bottom: 0%;
   left: 82%;
+  margin-top: 4rem;
 }
 
 .article-container .loading-bar {
@@ -174,4 +177,167 @@
   95%, 100% {
     transform: scale(1) rotate(360deg);
   }
+}
+
+
+
+
+.article-container .back {
+  position: relative;
+  width: auto;
+  height: 0px;
+}
+
+
+.article-container .matrix {
+  position: absolute;
+  left: 77%;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(#0000 calc(1*100%/6),#58D68D calc(3*100%/6),#0000 0),
+            linear-gradient(#0000 calc(2*100%/6),#F1C40F calc(4*100%/6),#0000 0),
+            linear-gradient(#0000 calc(3*100%/6),#E74C3C calc(5*100%/6),#0000 0);
+  background-size: 10px 400%;
+  background-repeat: no-repeat;
+  animation: matrix 1s infinite linear;
+}
+
+@keyframes matrix {
+  0% {
+    background-position: 0% 100%, 50% 100%, 100% 100%
+  }
+
+  100% {
+    background-position: 0% 0%, 50% 0%, 100% 0%
+  }
+}
+    
+
+
+
+
+.fourloader {
+  position: relative;
+  width: 2.5em;
+  height: 0px;
+  transform: rotate(165deg);
+  scale: 2;
+ }
+ 
+ .fourloader:before, .fourloader:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
+ }
+ 
+ .fourloader:before {
+  animation: before8 2s infinite;
+ }
+ 
+ .fourloader:after {
+  animation: after6 2s infinite;
+ }
+ 
+ @keyframes before8 {
+  0% {
+   width: 0.5em;
+   box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+ 
+  35% {
+   width: 2.5em;
+   box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+  }
+ 
+  70% {
+   width: 0.5em;
+   box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+ 
+  100% {
+   box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+ }
+ 
+ @keyframes after6 {
+  0% {
+   height: 0.5em;
+   box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+ 
+  35% {
+   height: 2.5em;
+   box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+  }
+ 
+  70% {
+   height: 0.5em;
+   box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+  }
+ 
+  100% {
+   box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+ }
+ 
+
+ .videoyt {
+  display: flex;
+  justify-content: center;
+ }
+
+ iframe {
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 80%;
+  height: 20rem;
+ }
+
+
+
+
+
+ .btn-next button {
+  align-items: center;
+  background-color: #283747;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 0.3rem;
+  padding-right: 0.7rem;
+  border-radius: 6px;
+}
+
+.btn-next button:hover {
+  color: #fff;
+}
+
+.btn-next button:before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+.btn-next button:hover:before {
+  background-color: #fff;
+  width: 3rem;
 }

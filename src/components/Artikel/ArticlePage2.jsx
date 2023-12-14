@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './articletemplate.css';
 import CodeEditor from '@uiw/react-textarea-code-editor';
 import php1 from '../../assets/images/php1.png'
-import { faAnglesLeft, faArrowUp, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesLeft, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ArticlePage1 = () => {
+const ArticlePage2 = () => {
 
   const [code, setCode] = useState(
     ``
@@ -87,7 +87,7 @@ const ArticlePage1 = () => {
 
 
       <div className='headerartikel'>
-        <h1>Pengenalan PHP</h1>
+        <h1>Panduan Penggunaan PHP</h1>
         <p className="meta">Published on December 10, 2023 by Team</p>
       </div>
       <img
@@ -98,27 +98,24 @@ const ArticlePage1 = () => {
       <div class="fourloader"></div>
 
       <article className="article-content">
-        <h2><b>Pengenalan PHP:</b></h2>
+        <h2><b>Memahami Dasar-dasar dan Membangun Aplikasi Web Dinamis:</b></h2>
         <p>
-        Apa itu PHP?
-PHP adalah singkatan dari "Hypertext Preprocessor". PHP adalah bahasa skrip sisi server yang dirancang khusus untuk pengembangan web, tetapi juga dapat digunakan sebagai bahasa umum pemrograman. PHP memungkinkan Anda menyisipkan kode di dalam dokumen HTML, yang kemudian dieksekusi oleh server web saat halaman diminta.
+        
+PHP (Hypertext Preprocessor) adalah bahasa pemrograman sisi server yang sangat populer untuk pengembangan web dinamis. Dengan PHP, Anda dapat membuat halaman web yang responsif, berinteraksi dengan pengguna, dan berkomunikasi dengan basis data. Artikel ini akan memberikan panduan pengguna dasar untuk memulai dengan PHP.
 
-Keuntungan Penggunaan PHP:
+1. Pemasangan PHP
+Sebelum memulai pengembangan PHP, pastikan Anda telah menginstal PHP di server atau mesin lokal Anda. Ikuti langkah-langkah pemasangan PHP sesuai dengan sistem operasi yang Anda gunakan. Anda dapat mengunduh versi PHP terbaru dari situs resmi (https://www.php.net/).
 
-Gratis: PHP adalah perangkat lunak sumber terbuka yang dapat diunduh dan digunakan tanpa biaya.
-Fleksibel: PHP bekerja pada berbagai platform dan dapat diintegrasikan dengan berbagai database, seperti MySQL.
-Mudah Dipelajari: PHP mudah dipelajari, terutama bagi mereka yang sudah memiliki pemahaman dasar tentang HTML.
-Dokumentasi Kuat: PHP memiliki dokumentasi yang baik dan aktif, yang memudahkan pengembang untuk mencari dan memahami fungsi-fungsi yang ada.
-<br/>
-<br/>
-<b>Cara Menggunakan PHP:</b>
-<br/>
-Penyisipan Kode PHP:
+2. Struktur Dasar PHP
+Setelah PHP terpasang, Anda dapat mulai membuat skrip PHP di dalam file HTML. Tag PHP dimulai dengan ?php dan diakhiri dengan ?. Contoh sederhana:
 
-Kode PHP dapat disisipkan di dalam tag HTML menggunakan delimiter (?php dan ?). Contoh:
 
-      <CodeEditor
-        value={`<?php\n  echo "Hello, World!";\n?>`}
+<CodeEditor
+        value={
+`<?php
+echo "Halo, dunia!";
+?>`
+        }
         language="js"
         placeholder="Please enter JS code."
         onChange={(evn) => setCode(evn.target.value)}
@@ -132,17 +129,17 @@ Kode PHP dapat disisipkan di dalam tag HTML menggunakan delimiter (?php dan ?). 
           fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
         }}
       />
+3. Variabel dan Tipe Data
+Dalam PHP, Anda menggunakan tanda $ untuk mendeklarasikan variabel. Tipe data dapat berupa string, integer, float, boolean, dan lainnya.
 
-Variabel dan Tipe Data:
 
-Variabel digunakan untuk menyimpan nilai. Tipe data termasuk string, integer, float, boolean, dll. Contoh:
-
-      <CodeEditor
+<CodeEditor
         value={
 `$nama = "John";
 $umur = 25;
-$gaji = 1000.50;
-$sudahMenikah = false;`}
+$tinggi = 175.5;
+$sudahMenikah = false;`
+        }
         language="js"
         placeholder="Please enter JS code."
         onChange={(evn) => setCode(evn.target.value)}
@@ -157,16 +154,18 @@ $sudahMenikah = false;`}
         }}
       />
 
-Perulangan:
-
-Digunakan untuk mengulangi blok kode tertentu. Contoh:
+4. Operasi Dasar
+PHP mendukung operasi aritmatika, pembanding, dan logika. Contoh:
 
 
 <CodeEditor
         value={
-`for ($i = 1; $i <= 5; $i++) {
-  echo "Iterasi ke-$i <br>";
-}`
+`$a = 5;
+$b = 10;
+
+$hasilTambah = $a + $b;
+$hasilPembanding = ($a == $b);
+$hasilLogika = ($a < $b) && ($b > 0);`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -183,38 +182,13 @@ Digunakan untuk mengulangi blok kode tertentu. Contoh:
       />
 
 
+
+5. Struktur Kontrol
+Pernyataan percabangan dan perulangan memungkinkan Anda mengendalikan alur program.
 
 Pernyataan Percabangan:
 
-Digunakan untuk mengambil keputusan berdasarkan kondisi tertentu. Contoh:
 
-<CodeEditor
-        value={
-`function sapa($nama) {
-  echo "Halo, $nama!";
-}
-
-sapa("Budi");`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-      
-      Fungsi:
-
-Fungsi digunakan untuk mengelompokkan kode ke dalam blok yang dapat dipanggil kembali. Contoh:
-
-      
 <CodeEditor
         value={
 `$umur = 18;
@@ -239,7 +213,56 @@ if ($umur >= 18) {
       />
       
 
-      Penggunaan Formulir:
+      Perulangan:
+
+      <CodeEditor
+        value={
+`for ($i = 1; $i <= 5; $i++) {
+    echo "Iterasi ke-$i <br>";
+  }`
+        }
+        language="js"
+        placeholder="Please enter JS code."
+        onChange={(evn) => setCode(evn.target.value)}
+        style={{
+          backgroundColor: "#",
+          width: '50%',
+          padding: '5px',
+          marginTop: '0.8rem',
+          marginBottom: '0.8rem',
+          borderRadius: '1rem',
+          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
+        }}
+      />
+
+
+6. Fungsi
+Fungsi memungkinkan Anda mengelompokkan blok kode yang dapat dipanggil kembali.
+
+<CodeEditor
+        value={
+`function sapa($nama) {
+    echo "Halo, $nama!";
+  }
+  
+  sapa("Budi");`
+        }
+        language="js"
+        placeholder="Please enter JS code."
+        onChange={(evn) => setCode(evn.target.value)}
+        style={{
+          backgroundColor: "#",
+          width: '50%',
+          padding: '5px',
+          marginTop: '0.8rem',
+          marginBottom: '0.8rem',
+          borderRadius: '1rem',
+          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
+        }}
+      />
+      
+
+      7. Penggunaan Formulir:
 
 PHP dapat digunakan untuk memproses data formulir yang dikirim dari halaman HTML. Contoh:
       
@@ -271,11 +294,10 @@ Nama: <input type="text" name="nama">
       />
 
 
-Fungsi:
+8. Koneksi ke Database
+PHP dapat digunakan untuk berinteraksi dengan database, seperti MySQL.
 
-Fungsi digunakan untuk mengelompokkan kode ke dalam blok yang dapat dipanggil kembali. Contoh:
 
-      
 <CodeEditor
         value={
 `$servername = "localhost";
@@ -304,17 +326,15 @@ if ($conn->connect_error) {
       />
 
 
+Kesimpulan
+Panduan pengguna PHP di atas mencakup dasar-dasar yang diperlukan untuk memulai pengembangan web dengan PHP. Teruslah belajar, eksperimen dengan kode, dan manfaatkan sumber daya online seperti dokumentasi resmi PHP untuk memperdalam pengetahuan Anda. Dengan menguasai dasar-dasar ini, Anda dapat membangun aplikasi web yang dinamis dan responsif.
+
+
+
+
         </p>
 
-        <div className='videoyt'>
-        <iframe
-          src="https://www.youtube.com/embed/TaBWhb5SPfc"
-          title="YouTube Video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        </div>
+
 
 
 
@@ -325,14 +345,6 @@ if ($conn->connect_error) {
         <div class="loading-bar"></div>
       </div>
 
-
-      <div className='btn-next'>
-      <button>
-        Tutorial Berikutnya
-      </button>
-      </div>
-    
-
       </article>
 
       <div class="matrix"></div>
@@ -341,4 +353,4 @@ if ($conn->connect_error) {
   );
 };
 
-export default ArticlePage1;
+export default ArticlePage2;

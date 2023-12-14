@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import bg1 from '../assets/images/bg1.png'
+import GridPHP from './GridPHP';
+import GridPHPSQL from './GridPHPSQL';
 
 const Home = () => {
   const [width, setWidth] = useState('0%'); // Set initial width to 0%
@@ -22,6 +24,7 @@ const Home = () => {
   }, []); 
 
   return (
+    <>
     <div className="container1">
       {/* Container 1 */}
       <div className='containerbg'></div>
@@ -110,6 +113,10 @@ const Home = () => {
         </div>
       </div>
     </div>
+
+    <GridPHP/>
+    <GridPHPSQL/>
+    </>
   );
 };
 

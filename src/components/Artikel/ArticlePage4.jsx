@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './articletemplate.css';
 import CodeEditor from '@uiw/react-textarea-code-editor';
 import php1 from '../../assets/images/php1.png'
-import { faAnglesLeft, faArrowUp, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesLeft, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ArticlePage1 = () => {
+const ArticlePage4 = () => {
 
   const [code, setCode] = useState(
     ``
@@ -87,7 +87,7 @@ const ArticlePage1 = () => {
 
 
       <div className='headerartikel'>
-        <h1>Pengenalan PHP</h1>
+        <h1>Function PHP</h1>
         <p className="meta">Published on December 10, 2023 by Team</p>
       </div>
       <img
@@ -98,130 +98,20 @@ const ArticlePage1 = () => {
       <div class="fourloader"></div>
 
       <article className="article-content">
-        <h2><b>Pengenalan PHP:</b></h2>
+        <h2><b>Mengoptimalkan Kode dengan Function:</b></h2>
         <p>
-        Apa itu PHP?
-PHP adalah singkatan dari "Hypertext Preprocessor". PHP adalah bahasa skrip sisi server yang dirancang khusus untuk pengembangan web, tetapi juga dapat digunakan sebagai bahasa umum pemrograman. PHP memungkinkan Anda menyisipkan kode di dalam dokumen HTML, yang kemudian dieksekusi oleh server web saat halaman diminta.
+        
 
-Keuntungan Penggunaan PHP:
+Fungsi adalah blok kode yang dapat dipanggil untuk menjalankan tugas tertentu. Pemisahan kode ke dalam fungsi membantu mengorganisir, mendaur ulang, dan mempermudah pemeliharaan kode. Berikut adalah panduan untuk memahami dan menggunakan fungsi dalam PHP.
 
-Gratis: PHP adalah perangkat lunak sumber terbuka yang dapat diunduh dan digunakan tanpa biaya.
-Fleksibel: PHP bekerja pada berbagai platform dan dapat diintegrasikan dengan berbagai database, seperti MySQL.
-Mudah Dipelajari: PHP mudah dipelajari, terutama bagi mereka yang sudah memiliki pemahaman dasar tentang HTML.
-Dokumentasi Kuat: PHP memiliki dokumentasi yang baik dan aktif, yang memudahkan pengembang untuk mencari dan memahami fungsi-fungsi yang ada.
-<br/>
-<br/>
-<b>Cara Menggunakan PHP:</b>
-<br/>
-Penyisipan Kode PHP:
+1. Deklarasi Fungsi
+Anda dapat mendeklarasikan fungsi menggunakan kata kunci function. Sebuah fungsi dapat memiliki parameter dan mengembalikan nilai. Contoh:
 
-Kode PHP dapat disisipkan di dalam tag HTML menggunakan delimiter (?php dan ?). Contoh:
-
-      <CodeEditor
-        value={`<?php\n  echo "Hello, World!";\n?>`}
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-
-Variabel dan Tipe Data:
-
-Variabel digunakan untuk menyimpan nilai. Tipe data termasuk string, integer, float, boolean, dll. Contoh:
-
-      <CodeEditor
-        value={
-`$nama = "John";
-$umur = 25;
-$gaji = 1000.50;
-$sudahMenikah = false;`}
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-
-Perulangan:
-
-Digunakan untuk mengulangi blok kode tertentu. Contoh:
-
-
-<CodeEditor
-        value={
-`for ($i = 1; $i <= 5; $i++) {
-  echo "Iterasi ke-$i <br>";
-}`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-
-
-
-Pernyataan Percabangan:
-
-Digunakan untuk mengambil keputusan berdasarkan kondisi tertentu. Contoh:
 
 <CodeEditor
         value={
 `function sapa($nama) {
   echo "Halo, $nama!";
-}
-
-sapa("Budi");`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-      
-      Fungsi:
-
-Fungsi digunakan untuk mengelompokkan kode ke dalam blok yang dapat dipanggil kembali. Contoh:
-
-      
-<CodeEditor
-        value={
-`$umur = 18;
-if ($umur >= 18) {
-  echo "Anda sudah dewasa.";
-} else {
-  echo "Anda masih anak-anak.";
 }`
         }
         language="js"
@@ -237,24 +127,190 @@ if ($umur >= 18) {
           fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
         }}
       />
+
+2. Panggil Fungsi
+Setelah fungsi dideklarasikan, Anda dapat memanggilnya di bagian lain dari program atau skrip PHP Anda.
+
+
+<CodeEditor
+        value={
+`sapa("John");
+// Output: Halo, John!`
+        }
+        language="js"
+        placeholder="Please enter JS code."
+        onChange={(evn) => setCode(evn.target.value)}
+        style={{
+          backgroundColor: "#",
+          width: '50%',
+          padding: '5px',
+          marginTop: '0.8rem',
+          marginBottom: '0.8rem',
+          borderRadius: '1rem',
+          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
+        }}
+      />
+
+3. Parameter Fungsi
+Fungsi dapat menerima parameter, yang digunakan untuk memberikan nilai ke dalam fungsi.
+
+
+
+<CodeEditor
+        value={
+`function tambah($a, $b) {
+  $hasil = $a + $b;
+  echo "Hasil penjumlahan: $hasil";
+}
+
+tambah(3, 5);
+// Output: Hasil penjumlahan: 8`
+        }
+        language="js"
+        placeholder="Please enter JS code."
+        onChange={(evn) => setCode(evn.target.value)}
+        style={{
+          backgroundColor: "#",
+          width: '50%',
+          padding: '5px',
+          marginTop: '0.8rem',
+          marginBottom: '0.8rem',
+          borderRadius: '1rem',
+          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
+        }}
+      />
+
+
+
+4. Nilai Balik (Return)
+Fungsi dapat mengembalikan nilai dengan menggunakan kata kunci return. Nilai ini dapat digunakan di bagian lain dari program.
+
+
+
+<CodeEditor
+        value={
+`function hitung($a, $b) {
+  $hasil = $a * $b;
+  return $hasil;
+}
+
+$hasilPerkalian = hitung(4, 6);
+// $hasilPerkalian sekarang bernilai 24`
+        }
+        language="js"
+        placeholder="Please enter JS code."
+        onChange={(evn) => setCode(evn.target.value)}
+        style={{
+          backgroundColor: "#",
+          width: '50%',
+          padding: '5px',
+          marginTop: '0.8rem',
+          marginBottom: '0.8rem',
+          borderRadius: '1rem',
+          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
+        }}
+      />
       
 
-      Penggunaan Formulir:
+      5. Variabel Lokal dan Global
+Variabel yang didefinisikan di dalam fungsi hanya dapat diakses di dalam fungsi tersebut (variabel lokal). Untuk mengakses variabel global di dalam fungsi, gunakan kata kunci global.
 
-PHP dapat digunakan untuk memproses data formulir yang dikirim dari halaman HTML. Contoh:
+
+      <CodeEditor
+        value={
+`$variabelGlobal = 10;
+
+function contohFungsi() {
+  global $variabelGlobal;
+  echo $variabelGlobal;
+}
+
+contohFungsi();
+// Output: 10`
+        }
+        language="js"
+        placeholder="Please enter JS code."
+        onChange={(evn) => setCode(evn.target.value)}
+        style={{
+          backgroundColor: "#",
+          width: '50%',
+          padding: '5px',
+          marginTop: '0.8rem',
+          marginBottom: '0.8rem',
+          borderRadius: '1rem',
+          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
+        }}
+      />
+
+
+6. Fungsi Rekursif
+Fungsi rekursif adalah fungsi yang memanggil dirinya sendiri. Ini sering digunakan untuk masalah pemrograman yang dapat dipecahkan dengan cara yang serupa secara berulang.
+
+
+<CodeEditor
+        value={
+`function faktorial($n) {
+  if ($n <= 1) {
+    return 1;
+  } else {
+    return $n * faktorial($n - 1);
+  }
+}
+
+$hasilFaktorial = faktorial(5);
+// $hasilFaktorial sekarang bernilai 120`
+        }
+        language="js"
+        placeholder="Please enter JS code."
+        onChange={(evn) => setCode(evn.target.value)}
+        style={{
+          backgroundColor: "#",
+          width: '50%',
+          padding: '5px',
+          marginTop: '0.8rem',
+          marginBottom: '0.8rem',
+          borderRadius: '1rem',
+          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
+        }}
+      />
+      
+
+      7. Fungsi Bawaan PHP
+PHP menyediakan berbagai fungsi bawaan yang dapat digunakan langsung, seperti strlen(), strpos(), dan banyak lagi. Dokumentasi resmi PHP berisi informasi rinci tentang fungsi-fungsi ini.
+
       
 <CodeEditor
         value={
-`<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $nama = $_POST["nama"];
+`$panjangKata = strlen("Halo");
+// $panjangKata sekarang bernilai 4`
+        }
+        language="js"
+        placeholder="Please enter JS code."
+        onChange={(evn) => setCode(evn.target.value)}
+        style={{
+          backgroundColor: "#",
+          width: '50%',
+          padding: '5px',
+          marginTop: '0.8rem',
+          marginBottom: '0.8rem',
+          borderRadius: '1rem',
+          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
+        }}
+      />
+
+
+8. Menangani Parameter Default
+Anda dapat memberikan nilai default untuk parameter fungsi. Jika nilai tidak diberikan saat pemanggilan fungsi, nilai default akan digunakan.
+
+
+<CodeEditor
+        value={
+`function sapa($nama = "Tamu") {
   echo "Halo, $nama!";
 }
-?>
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-Nama: <input type="text" name="nama">
-<input type="submit" value="Submit">
-</form>`
+
+sapa();
+// Output: Halo, Tamu!`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -271,23 +327,17 @@ Nama: <input type="text" name="nama">
       />
 
 
-Fungsi:
+9. Anonymous Functions (Closure)
+Anonymous functions, atau disebut juga closure, adalah fungsi tanpa nama yang dapat disimpan dalam variabel atau langsung digunakan.
 
-Fungsi digunakan untuk mengelompokkan kode ke dalam blok yang dapat dipanggil kembali. Contoh:
-
-      
 <CodeEditor
         value={
-`$servername = "localhost";
-$username = "username";
-$password = "password";
-$database = "nama_database";
+`$sapa = function($nama) {
+  echo "Halo, $nama!";
+};
 
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-  die("Koneksi gagal: " . $conn->connect_error);
-}`
+$sapa("Budi");
+// Output: Halo, Budi!`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -302,19 +352,14 @@ if ($conn->connect_error) {
           fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
         }}
       />
+
+Kesimpulan
+Fungsi adalah komponen kunci dalam pemrograman PHP yang membantu Anda mengorganisir kode, meningkatkan keterbacaan, dan mempermudah pemeliharaan. Pahami konsep-konsep dasar ini, dan Anda akan dapat membuat kode PHP yang lebih efisien dan mudah dipelihara. Selalu merujuk pada dokumentasi resmi PHP untuk mendapatkan wawasan lebih lanjut tentang fungsi dan fitur lainnya.
 
 
         </p>
 
-        <div className='videoyt'>
-        <iframe
-          src="https://www.youtube.com/embed/TaBWhb5SPfc"
-          title="YouTube Video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        </div>
+
 
 
 
@@ -325,14 +370,6 @@ if ($conn->connect_error) {
         <div class="loading-bar"></div>
       </div>
 
-
-      <div className='btn-next'>
-      <button>
-        Tutorial Berikutnya
-      </button>
-      </div>
-    
-
       </article>
 
       <div class="matrix"></div>
@@ -341,4 +378,4 @@ if ($conn->connect_error) {
   );
 };
 
-export default ArticlePage1;
+export default ArticlePage4;

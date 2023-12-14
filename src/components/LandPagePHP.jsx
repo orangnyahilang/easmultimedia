@@ -21,6 +21,7 @@ function LandPagePHP() {
       };
     
   return (
+    <>
     <div className='php'>
     <div className='arrowposition'>
         <Link onClick={handleBack}>
@@ -62,7 +63,7 @@ function LandPagePHP() {
           </div>
       </div>
       </Link>
-      <Link to='tutorial1'>
+      <Link to='tutorial2'>
       <div className='buttonlist'>
           Panduan Pengguna
           <div class="arrow-wrapper">
@@ -70,15 +71,15 @@ function LandPagePHP() {
           </div>
       </div>
       </Link>
-      <Link to='tutorial1'>
+      <Link to='tutorial3'>
       <div className='buttonlist'>
-          Referensi Fungsi
+          Referensi Function
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
       </div>
       </Link>
-      <Link to='tutorial1'>
+      <Link to='tutorial4'>
       <div className='buttonlist'>
           Pengelolaan Ekstensi
           <div class="arrow-wrapper">
@@ -86,7 +87,7 @@ function LandPagePHP() {
           </div>
       </div>
       </Link>
-      <Link to='tutorial1'>
+      <Link to='tutorial5'>
       <div className='buttonlist'>
           PDO (PNP Data Object)
           <div class="arrow-wrapper">
@@ -94,7 +95,7 @@ function LandPagePHP() {
           </div>
       </div>
       </Link>
-      <Link to='tutorial1'>
+      <Link to='tutorial6'>
       <div className='buttonlist'>
           Object Oriented Programming
           <div class="arrow-wrapper">
@@ -102,7 +103,7 @@ function LandPagePHP() {
           </div>
       </div>
       </Link>
-      <Link to='tutorial1'>
+      <Link to='tutorial7'>
       <div className='buttonlist'>
           Pemrograman Web
           <div class="arrow-wrapper">
@@ -168,6 +169,7 @@ function LandPagePHP() {
     </div>
 
     </div>
+    </>
   )
 }
 
