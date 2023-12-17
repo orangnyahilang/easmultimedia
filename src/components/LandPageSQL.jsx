@@ -57,7 +57,7 @@ function LandPageSQL() {
         <h1>Apa saja yang perlu dipelajari bagi pemula?</h1>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          Pengenalan PHP
+          Pengenalan MySQL
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -65,7 +65,7 @@ function LandPageSQL() {
       </Link>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          Panduan Pengguna
+          Instalasi dan Konfigurasi
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -73,7 +73,7 @@ function LandPageSQL() {
       </Link>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          Referensi Fungsi
+          Operasi CRUD
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -81,7 +81,7 @@ function LandPageSQL() {
       </Link>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          Pengelolaan Ekstensi
+          Query SQL
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -89,7 +89,7 @@ function LandPageSQL() {
       </Link>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          PDO (PNP Data Object)
+          Security
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -97,7 +97,7 @@ function LandPageSQL() {
       </Link>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          Object Oriented Programming
+          Replikasi dan Pengolahan
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -105,7 +105,7 @@ function LandPageSQL() {
       </Link>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          Pemrograman Web
+          Penyelarasan Performa
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>

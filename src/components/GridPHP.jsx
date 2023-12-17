@@ -6,9 +6,43 @@ function GridPHP() {
 
     const industry = require('../assets/images/industry.png'); 
     const coding = require('../assets/images/jasa.jpg'); 
+    const mysql = require('../assets/images/mysql.png'); 
+    const php3 = require('../assets/images/php3.png'); 
+
+
 
   return (
     <>
+        <section className="bg-gray-900 text-white">
+      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+        <div className="mx-auto max-w-3xl text-center">
+          <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl h-28">
+          Build Programs with PHP and MySQL
+          </h1>
+
+          <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+          Gabungkan kekuatan PHP dan SQL untuk menciptakan aplikasi web dinamis dengan efisiensi dan responsivitas tinggi.
+          </p>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+              href="/get-started"
+            >
+              Get Started
+            </a>
+
+
+          </div>
+          <div className='mysql'>
+            <img src={mysql} alt="" />
+          </div>
+          <div className='myphp'>
+            <img src={php3} alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
     <div className='header'>
         <h1>Alasan Kenapa Mahasiswa Informatika Wajib Mempelajari Bahasa Pemrograman PHP</h1>
     </div>
@@ -37,7 +71,7 @@ function GridPHP() {
             <p>Dapat diintegrasikan dengan berbagai database, meningkatkan fleksibilitas.</p>
         </div>
         <div id="item-4">
-            <h2>Membangun Portofolio</h2>
+            <h2>Membangun Portfolio</h2>
             <p>kesempatan bagi mahasiswa untuk membangun proyek nyata dan meningkatkan portofolio pengembangan web.</p>
             <img className='industry' src={coding} alt="" />
         </div>

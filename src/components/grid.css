@@ -1,11 +1,21 @@
+.header {
+  background-color: rgb(17,24,39);
+}
+
 .header h1 {
-  font-family: 'Catamaran', sans-serif;
-  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 3.5rem;
-  margin-bottom: 1rem;
-  padding: 0 12rem 0 12rem;
+  padding: 0 7rem 0 7rem;
+  background: #fff;
+  padding-top: 4rem;
+  height: 12rem;
+  border-top-left-radius: 7rem;
+  border-top-right-radius: 7rem;
+  box-shadow: -10px 10px 25px #148F77;
+  position: relative;
+  z-index: 3;
 }
 
 .angry-grid {
@@ -13,8 +23,10 @@
     position: relative;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 100vh;    
+    height: 100vh;
     font-family: 'Catamaran', sans-serif;
+    background: #fff;
+    z-index: 4;
  }
  .angry-grid h2 {
     font-weight: bold;
@@ -44,6 +56,7 @@
    background: -webkit-linear-gradient(180deg,#16a286, #12836c, #1c8146);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+   margin-top: 0.5rem;
 }
  .angry-grid #item-0 p {
    margin-top: 0.4rem;
@@ -404,4 +417,32 @@
    margin: auto;
    transform: rotateX(90deg) translateZ(-40px);
    filter: blur(12px);
+ }
+
+
+
+/* From https://css.glass */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ .mysql img {
+  position: absolute;
+  scale: 0.35;
+  top: 170%;
+  left: 65%;
+  z-index: 1;
+ }
+
+ .myphp img {
+  position: absolute;
+  scale: 0.2;
+  top: 145%;
+  left: -10%;
+  z-index: 4;
  }
