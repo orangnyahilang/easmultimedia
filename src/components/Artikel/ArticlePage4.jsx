@@ -78,16 +78,11 @@ const ArticlePage4 = () => {
       <div className='back'>
       <FontAwesomeIcon icon={faAnglesLeft} style={{fontSize: '2rem', cursor: 'pointer', color: '#2471A3'}} onClick={handleBack} />
       </div>
-      <div class="loader">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-      </div>
+
 
 
       <div className='headerartikel'>
-        <h1>Function PHP</h1>
+        <h1>Mengenal Tipe Data dan variabel di PHP</h1>
         <p className="meta">Published on December 10, 2023 by Team</p>
       </div>
       <img
@@ -98,21 +93,59 @@ const ArticlePage4 = () => {
       <div class="fourloader"></div>
 
       <article className="article-content">
-        <h2><b>Mengoptimalkan Kode dengan Function:</b></h2>
+        <h2><b>5 Hal Dasar yang Harus diketahui tentang Variabel dan Tipe Data</b></h2>
         <p>
         
 
-Fungsi adalah blok kode yang dapat dipanggil untuk menjalankan tugas tertentu. Pemisahan kode ke dalam fungsi membantu mengorganisir, mendaur ulang, dan mempermudah pemeliharaan kode. Berikut adalah panduan untuk memahami dan menggunakan fungsi dalam PHP.
+        Apa kamu pernah menemukan x dan y dalam perlajaran matematika?
 
-1. Deklarasi Fungsi
-Anda dapat mendeklarasikan fungsi menggunakan kata kunci function. Sebuah fungsi dapat memiliki parameter dan mengembalikan nilai. Contoh:
+Mereka berdua sebenarnya adalah variabel yang menyimpan sesuatu.
+
+Kadang, kita sering diberi tugas untuk mencari tahu isi dari x dan y.
+<br/>
+Contohnya:
+<br/>
+jika x + 3 = 5, Berapakah x?
+Variabe dalam pemrograman juga memiliki arti yang sama seperti dalam matematika.
+
+Variabel adalah tempat kita menyimpan nilai sementara.
+
+Variabel akan ada selama program dijalankan. Namun kita juga bisa menghapusnya dari memori.
+
+Nanti kita akan pelajari caranya.
+
+Jadi, pada artikel ini kamu akan belajar:
+<br/>
+<br/>
+
+1. Cara membuat variabel dan menyimpan nilai di sana
+<br/>
+2. Cara mengambil nilai dari variabel
+<br/>
+3. Mengenal tipe data apa saja yang dapat disimpan di dalam variabel
+<br/>
+4. Konversi tipe data
+<br/>
+5. Menghapus variabel dari memori
+<br/>
+<br/>
+Mari kita mulai…
+<br/>
+<br/>
+<strong>1. Membuat Variabel di PHP</strong>
+<br/>
+
+Pada PHP, kita membuat variabel dengan tanda dolar ($), lalu diikuti dengan nama variabelnya serta nilai yang ingin kita simpan.
+<br/>
+Contoh:
+
 
 
 <CodeEditor
         value={
-`function sapa($nama) {
-  echo "Halo, $nama!";
-}`
+`<?php
+
+$harga = 1000;`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -128,14 +161,22 @@ Anda dapat mendeklarasikan fungsi menggunakan kata kunci function. Sebuah fungsi
         }}
       />
 
-2. Panggil Fungsi
-Setelah fungsi dideklarasikan, Anda dapat memanggilnya di bagian lain dari program atau skrip PHP Anda.
+Kita baru saja membuat variabel bernama $harga dengan isi 1000.
+
+Tanda sama dengan (=) adalah simbol atau operator yang digunakan untuk mengisi nilai ke variabel.
+
+Mudah bukan?
+
+Mari kita coba contoh yang lain:
 
 
 <CodeEditor
         value={
-`sapa("John");
-// Output: Halo, John!`
+`<?php
+
+$nama_barang = "Kopi C++";
+$harga = 4000;
+$stok = 40;`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -151,20 +192,20 @@ Setelah fungsi dideklarasikan, Anda dapat memanggilnya di bagian lain dari progr
         }}
       />
 
-3. Parameter Fungsi
-Fungsi dapat menerima parameter, yang digunakan untuk memberikan nilai ke dalam fungsi.
+Dalam membuat nama variabel ada beberapa hal yang harus diperhatikan:
+
+Awal dari nama variabel tidak boleh menggunakan angka dan simbol, kecuali underscore.
+
+Nama variabel yang terdiri dari dua suku kata, bisa dipisah dengan underscore (_) atau menggunakan style camelCase.
+<br/>
+Contoh:
 
 
 
 <CodeEditor
         value={
-`function tambah($a, $b) {
-  $hasil = $a + $b;
-  echo "Hasil penjumlahan: $hasil";
-}
-
-tambah(3, 5);
-// Output: Hasil penjumlahan: 8`
+`$nama_barang = "Buku PHP";
+$namaPembeli = "Petani Kode"; // <-- menggunakan camelCase`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -182,20 +223,17 @@ tambah(3, 5);
 
 
 
-4. Nilai Balik (Return)
-Fungsi dapat mengembalikan nilai dengan menggunakan kata kunci return. Nilai ini dapat digunakan di bagian lain dari program.
+Variabel harus diisi saat pembuatannya. Bila kita tidak ingin mengisi, cukup isi dengan nilai kosong.
+<br/>
+Contoh:
 
 
 
 <CodeEditor
         value={
-`function hitung($a, $b) {
-  $hasil = $a * $b;
-  return $hasil;
-}
-
-$hasilPerkalian = hitung(4, 6);
-// $hasilPerkalian sekarang bernilai 24`
+`$nama_barang = "";
+$namaPembeli = "";
+$harga = 0;`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -212,7 +250,9 @@ $hasilPerkalian = hitung(4, 6);
       />
       
 
-      5. Variabel Lokal dan Global
+        <br/>
+      Variabel Lokal dan Global
+      <br/>
 Variabel yang didefinisikan di dalam fungsi hanya dapat diakses di dalam fungsi tersebut (variabel lokal). Untuk mengakses variabel global di dalam fungsi, gunakan kata kunci global.
 
 
@@ -243,22 +283,17 @@ contohFungsi();
       />
 
 
-6. Fungsi Rekursif
-Fungsi rekursif adalah fungsi yang memanggil dirinya sendiri. Ini sering digunakan untuk masalah pemrograman yang dapat dipecahkan dengan cara yang serupa secara berulang.
+Nama variabel bersifat Case Sensitive, artinya huruf besar dan huruf kecil dibedakan.
+<br/>
+Contoh: Tiga variabel ini akan dianggap berbeda.
 
+<br/>
 
 <CodeEditor
         value={
-`function faktorial($n) {
-  if ($n <= 1) {
-    return 1;
-  } else {
-    return $n * faktorial($n - 1);
-  }
-}
-
-$hasilFaktorial = faktorial(5);
-// $hasilFaktorial sekarang bernilai 120`
+`$Belajar = "";
+$BELAJAR = "";
+$belajar = "";`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -274,15 +309,27 @@ $hasilFaktorial = faktorial(5);
         }}
       />
       
+<br/>
+      <strong>2. Mengambil Nilai dari Variabel</strong>
+      <br/>
+Setelah kita membuat variabel, biasanya akan kita gunakan pada proses berikutnya dengan mengambil nilainya.
 
-      7. Fungsi Bawaan PHP
-PHP menyediakan berbagai fungsi bawaan yang dapat digunakan langsung, seperti strlen(), strpos(), dan banyak lagi. Dokumentasi resmi PHP berisi informasi rinci tentang fungsi-fungsi ini.
+Ya iya lah, masak cuma dibuat saja dan tidak digunakan.
 
+Mengambil nilai dari variabel bisa kita lakukan dengan menuliskan namanya dalam perintah echo maupun ekspresi yang lain.
+<br/>
+Contoh:
       
 <CodeEditor
         value={
-`$panjangKata = strlen("Halo");
-// $panjangKata sekarang bernilai 4`
+`<?php
+
+// membuat variabel baru
+$nama_barang = "Minyak Goreng";
+$harga = 15000;
+
+// menampilkan isi variabel
+echo "Ibu membeli $nama_barang seharga Rp $harga";`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -297,20 +344,69 @@ PHP menyediakan berbagai fungsi bawaan yang dapat digunakan langsung, seperti st
           fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
         }}
       />
+  Hasilnya :
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/php/var/membuat-var.png' alt=''/>
 
+<strong>3. Mengenal Tipe Data di PHP</strong>
+<br/>
+Variabel yang sudah kita buat bisa kita simpan dengan berbagai jenis data.
 
-8. Menangani Parameter Default
-Anda dapat memberikan nilai default untuk parameter fungsi. Jika nilai tidak diberikan saat pemanggilan fungsi, nilai default akan digunakan.
+Jenis-jenis data ini disebut tipe data.
+<br/>
+<br/>
+Ada beberapa macam tipe data yang dapat disimpan dalam variabel:
+<br/>
+1. Tipe data char (karakter)
+<br/>
+2. Tipe data string (teks)
+<br/>
+3. Tipe data integer (angka)
+<br/>
+4. Tipe data float (pecahan)
+<br/>
+5. Tipe data boolean
+<br/>
+6. Tipe data objek
+<br/>
+7. Tipe data Array
+<br/>
+8. NULL
+<br/>
+<br/>
+PHP PHP, kita tidak harus mendeklarasikan tipe datanya secara eksplisit. Karena PHP sudah mampu mengenali tipe data dari nilai yang kita berikan.
 
+Contoh:
 
 <CodeEditor
         value={
-`function sapa($nama = "Tamu") {
-  echo "Halo, $nama!";
-}
+`<?php
 
-sapa();
-// Output: Halo, Tamu!`
+// tipe data char (karakter)
+$jenis_kelamin = 'L';
+
+// tipe data string (teks)
+$nama_lengkap = "Petani Kode";
+
+// tipe data integer
+$umur = 20;
+
+// tipe data float
+$berat = 48.3;
+
+// tipe data float
+$tinggi = 182.2;
+
+// tipe data boolean
+$menikah = false;
+
+echo "Nama: $nama_lengkap<br>";
+echo "Jenis Kelamin: $jenis_kelamin<br>";
+echo "Umur: $umur tahun<br>";
+echo "berat badan: $berat kg<br>";
+echo "tinggi badan: $tinggi cm<br>";
+echo "menikah: $menikah";`
         }
         language="js"
         placeholder="Please enter JS code."
@@ -327,34 +423,44 @@ sapa();
       />
 
 
-9. Anonymous Functions (Closure)
-Anonymous functions, atau disebut juga closure, adalah fungsi tanpa nama yang dapat disimpan dalam variabel atau langsung digunakan.
+Hasilnya :
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/php/var/tipe-data.png' alt=''/>
 
-<CodeEditor
-        value={
-`$sapa = function($nama) {
-  echo "Halo, $nama!";
-};
+Variabel <strong>$menikah</strong> akan ditampilkan kosong, karena nilai false akan dikonversi menjadi kosong dalam string.
 
-$sapa("Budi");
-// Output: Halo, Budi!`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
+Nanti kita akan bahas cara konversi tipe data di PHP.
 
-Kesimpulan
-Fungsi adalah komponen kunci dalam pemrograman PHP yang membantu Anda mengorganisir kode, meningkatkan keterbacaan, dan mempermudah pemeliharaan. Pahami konsep-konsep dasar ini, dan Anda akan dapat membuat kode PHP yang lebih efisien dan mudah dipelihara. Selalu merujuk pada dokumentasi resmi PHP untuk mendapatkan wawasan lebih lanjut tentang fungsi dan fitur lainnya.
+Sekarang mari kita bahas masing-masing tipe data lebih detail…
+<br/><br/>
+Tipe Data Char dan String di PHP
+Char adalah tipe data yang terdiri dari karakter. Penulisannya diapit dengan tanda petik satu.
+Lalu, String adalah tipe data yang terdiri dari kumpulan karakter. Penulisannya diapit dengan tanda petik ganda.
+<br/><br/>
+Tipe Data Integer di PHP
+Integer adalah tipe data angka. Penulisanya tidak menggunakan tanda petik.
+<br/><br/>
+Tipe Data Float di PHP
+Float adalah tipe data bilangan pecahan. Sama seperti integer, tipe data ini ditulis tanpa tanda petik.
+<br/><br/>
+Tipe data Boolean di PHP
+Tipe data boolean adalah tipe data yang hanya bernilai ture dan false.
+
+Penulisan true dan false tidak diapit dengan tanda petik.
+<br/><br/>
+Tipe Data Array dalam PHP
+Array adalah tipe data yang berisi sekumpulan data.
+<br/><br/>
+Tipe Data Objek di PHP
+Tipe data objek adalah tipe data abstrak yang berisi data dan method.
+
+Tipe data objek lebih sering disebut instance dari sebuah class. Pada contoh di atas User() adalah class yang di-instance di variabel $user.
+<br/><br/>
+Tipe Data NULL di PHP
+Tipe data NULL adalah tipe data yang menyatakan kosong.
+<br/>
+Artinya: Jika kita mengisi variabel dengan nilai NULL, maka variabel tersebut akan dianggap kosong atau tidak punya nilai.
 
 
         </p>
@@ -362,13 +468,6 @@ Fungsi adalah komponen kunci dalam pemrograman PHP yang membantu Anda mengorgani
 
 
 
-
-      <div class="loading-wave">
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
-      </div>
 
       </article>
 

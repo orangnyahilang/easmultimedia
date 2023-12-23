@@ -8,6 +8,9 @@ import ArticlePage1 from './components/Artikel/ArticlePage1';
 import ArticlePage2 from './components/Artikel/ArticlePage2';
 import ArticlePage3 from './components/Artikel/ArticlePage3';
 import Testing from './components/testing';
+import ArticlePage6 from './components/Artikel/ArticlePage6';
+import ArticlePage5 from './components/Artikel/ArticlePage5';
+import ArticlePage4 from './components/Artikel/ArticlePage4';
 
 function App() {
   return (
@@ -22,6 +25,10 @@ function App() {
           <Route path="/phplanding/tutorial1" element={<ArticlePage1/>} />
           <Route path="/phplanding/tutorial2" element={<ArticlePage2/>} />
           <Route path="/phplanding/tutorial3" element={<ArticlePage3/>} />
+          <Route path="/phplanding/tutorial4" element={<ArticlePage4/>} />
+          <Route path="/phplanding/tutorial5" element={<ArticlePage5/>} />
+          <Route path="/phplanding/tutorial6" element={<ArticlePage6/>} />
+
           <Route path="/sqllanding/tutorial1" element={<ArticlePage1/>} />
 
           <Route path="/tes" element={<Testing/>} />

@@ -78,16 +78,11 @@ const ArticlePage2 = () => {
       <div className='back'>
       <FontAwesomeIcon icon={faAnglesLeft} style={{fontSize: '2rem', cursor: 'pointer', color: '#2471A3'}} onClick={handleBack} />
       </div>
-      <div class="loader">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-      </div>
+
 
 
       <div className='headerartikel'>
-        <h1>Panduan Penggunaan PHP</h1>
+        <h1>Pemrograman PHP di Windows dengan XAMPP</h1>
         <p className="meta">Published on December 10, 2023 by Team</p>
       </div>
       <img
@@ -98,252 +93,126 @@ const ArticlePage2 = () => {
       <div class="fourloader"></div>
 
       <article className="article-content">
-        <h2><b>Memahami Dasar-dasar dan Membangun Aplikasi Web Dinamis:</b></h2>
+        <h2><b>Pemrograman PHP di Windows dengan XAMPP</b></h2>
         <p>
         
-PHP (Hypertext Preprocessor) adalah bahasa pemrograman sisi server yang sangat populer untuk pengembangan web dinamis. Dengan PHP, Anda dapat membuat halaman web yang responsif, berinteraksi dengan pengguna, dan berkomunikasi dengan basis data. Artikel ini akan memberikan panduan pengguna dasar untuk memulai dengan PHP.
 
-1. Pemasangan PHP
-Sebelum memulai pengembangan PHP, pastikan Anda telah menginstal PHP di server atau mesin lokal Anda. Ikuti langkah-langkah pemasangan PHP sesuai dengan sistem operasi yang Anda gunakan. Anda dapat mengunduh versi PHP terbaru dari situs resmi (https://www.php.net/).
+        Pada dasarnya, kita membutuhkan alat-alat ini untuk bisa mulai coding PHP:
+<br/>
+<br/>
+Teks Editor;
+<br/>
+Web Browser;
+<br/>
+Web Server;
+<br/>
+PHP itu sendiri.
+<br/>
+<br/>
+Nah, pada pembahasan kali ini.. kita akan fokus mempersiapkan web server dan PHP. Untuk teks editor dan browser, kamu bisa baca di tulisan yang berbeda:
 
-2. Struktur Dasar PHP
-Setelah PHP terpasang, Anda dapat mulai membuat skrip PHP di dalam file HTML. Tag PHP dimulai dengan ?php dan diakhiri dengan ?. Contoh sederhana:
+PHP adalah bahasa pemrograman yang berjalan di server, karena itu kita membutuhkan sebuah web server.
 
+Webserver di windows bisa dibuat dengan berbagai macam cara. Ada yang menggunakan PHP secara manual dengan web server bawaan PHP; ada yang menggunakan WSL lalu menginstal LAMPP Stack; ada yang menggunakan XAMPP; ada yang menggunakan Docker, dan lain sebgainya.
 
-<CodeEditor
-        value={
-`<?php
-echo "Halo, dunia!";
-?>`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-3. Variabel dan Tipe Data
-Dalam PHP, Anda menggunakan tanda $ untuk mendeklarasikan variabel. Tipe data dapat berupa string, integer, float, boolean, dan lainnya.
+Namun, intinya kita hanya perlu menyiapkan web server sebagai tempat PHP dijalankan.
 
+Pada tutorial ini, kita akan menggunakan XAMPP.
 
-<CodeEditor
-        value={
-`$nama = "John";
-$umur = 25;
-$tinggi = 175.5;
-$sudahMenikah = false;`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
+Siap?
 
-4. Operasi Dasar
-PHP mendukung operasi aritmatika, pembanding, dan logika. Contoh:
+Mari kita mulai..
+<br/>
+<br/>
+<strong>Apa itu XAMPP?</strong>
+<br/>
+XAMPP adalah program untuk membuat server. XAMPP menyediakan paket server yang kita butuhkan untuk pengembangan web dengan PHP. Mulai dari PHP, MySQL, PHPmyadmin, dll.
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/xampp-windows/isi-xampp.avif' alt=''/>
+XAMPP merupakan singkatan dari X (cross-platform), Apache, MySQL atau MariaDB, PHP, Perl. Huruf X di XAMPP memiliki makna cross-platform yang artinya XAMPP bisa digunakan di berbagai sistem operasi seperti Linux, Windows, dan MacOS.
+<br/>
+<br/>
+<strong>Cara Install XAMPP di Windows</strong>
+<br/>
+Pertama, silahkan download XAMPP di website resminya.
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/xampp-windows/download-xampp.avif' alt=''/>
+Setelah itu, kita akan mendapatkan file installer dari XAMPP. Silahkan klik 2x file tersebut.
 
+…klik saja OK.
+<br/>
+Berikutnya, klik Next.
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/xampp-windows/setup-xampp.avif' alt=''/>
+<br/>
+Berikutnya XAMPP akan meminta kita untuk menentukan komponen apa saja yang ingin diinstal. Centang saja semuanya seperti gambar di bawah ini. Lalu klik Next.
+<br/>
+Berikutnya, kita akan diminta untuk menentukan lokasi penginstalan. Biarkan saja di C:\xampp, setelah itu klik Next.
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/xampp-windows/xampp-install-path.avif' alt=''/>
+<br/>
+Berikutnya, hilangkan centang pada Learn more about Bitnami for XAMPP dan klik Next.
+<br/>
 
-<CodeEditor
-        value={
-`$a = 5;
-$b = 10;
+Berikunya, jika muncul pemblokiran dari Firewall, klik saja Allow Access.
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/xampp-windows/xampp-windows-firewall.avif' alt=''/>
+<br/>
+Selesai, klik Finish untuk mengakhiri.
+<br/>
+<br/>
+<strong>Manajemen Server XAMPP</strong>
+<br/>
+Kita bisa memanajemen server dengan mudah melalui Control Panel XAMPP.
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/xampp-windows/xampp-control-panel-windows-10.avif' alt=''/>
+<br/>
+Pada Control Panel ini, kita bisa menyalakan dan mematikan, melakukan konfigurasi, memantau log, menjalankan shell, dan lain-lain.
 
-$hasilTambah = $a + $b;
-$hasilPembanding = ($a == $b);
-$hasilLogika = ($a < $b) && ($b > 0);`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
+Untuk percobaan, coba klik tombol Start pada Apache dan MySQL. Sehingga statusnya akan menjadi running.
 
+Apache adalah webserver untuk menjalankan PHP dan MySQL adalah database server untuk menjalankan MySQL.
 
+Jika ada warna hijau dan ada nilai PID dan Port.. maka artinya server sudah berjalan. Tinggal kita pakai saja.
+<br/>
+<br/>
+<strong>Apa itu PID dan Port?</strong>
+<br/>
+PID adalah process ID, merupakan nomer proses yang dipakai pada taks manager
+Port adalah nomer port yang akan dipakai untuk mengakses server.
+Nomer Port ini perlu kamu perhatikan, karena bisa jadi nomer port tersebut sudah dipakai oleh service yang lain.
 
-5. Struktur Kontrol
-Pernyataan percabangan dan perulangan memungkinkan Anda mengendalikan alur program.
-
-Pernyataan Percabangan:
-
-
-<CodeEditor
-        value={
-`$umur = 18;
-if ($umur >= 18) {
-  echo "Anda sudah dewasa.";
-} else {
-  echo "Anda masih anak-anak.";
-}`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-      
-
-      Perulangan:
-
-      <CodeEditor
-        value={
-`for ($i = 1; $i <= 5; $i++) {
-    echo "Iterasi ke-$i <br>";
-  }`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-
-
-6. Fungsi
-Fungsi memungkinkan Anda mengelompokkan blok kode yang dapat dipanggil kembali.
-
-<CodeEditor
-        value={
-`function sapa($nama) {
-    echo "Halo, $nama!";
-  }
-  
-  sapa("Budi");`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-      
-
-      7. Penggunaan Formulir:
-
-PHP dapat digunakan untuk memproses data formulir yang dikirim dari halaman HTML. Contoh:
-      
-<CodeEditor
-        value={
-`<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $nama = $_POST["nama"];
-  echo "Halo, $nama!";
-}
-?>
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-Nama: <input type="text" name="nama">
-<input type="submit" value="Submit">
-</form>`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-
-
-8. Koneksi ke Database
-PHP dapat digunakan untuk berinteraksi dengan database, seperti MySQL.
-
-
-<CodeEditor
-        value={
-`$servername = "localhost";
-$username = "username";
-$password = "password";
-$database = "nama_database";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-  die("Koneksi gagal: " . $conn->connect_error);
-}`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-
-
-Kesimpulan
-Panduan pengguna PHP di atas mencakup dasar-dasar yang diperlukan untuk memulai pengembangan web dengan PHP. Teruslah belajar, eksperimen dengan kode, dan manfaatkan sumber daya online seperti dokumentasi resmi PHP untuk memperdalam pengetahuan Anda. Dengan menguasai dasar-dasar ini, Anda dapat membangun aplikasi web yang dinamis dan responsif.
-
+Biasanya apache akan menggunakan nomer port 80, 443 dan MySQL akan menggunakan nomer port 3306.
 
 
 
         </p>
 
 
+        <div className='videoyt'>
+        <iframe
+          src="https://www.youtube.com/embed/MlwfLyz8AjY?si=c3IaaVBWKgDua-XK"
+          title="YouTube Video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        </div>
 
 
 
-      <div class="loading-wave">
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
+      <div className='btn-next'>
+      <button>
+        Tutorial Berikutnya
+      </button>
       </div>
+
 
       </article>
 

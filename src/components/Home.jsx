@@ -31,7 +31,7 @@ const Home = () => {
       <div className="container2">
         {/* Container 2 */}
         <div className="grid1">
-          <div className='cubesl'>
+          {/* <div className='cubesl'>
             <div class="loop cubes">
                       <div class="item cubes"></div>
                       <div class="item cubes"></div>
@@ -40,7 +40,7 @@ const Home = () => {
                       <div class="item cubes"></div>
                       <div class="item cubes"></div>
               </div>
-            </div>
+            </div> */}
           <div className='ggboltdiv'>
             <i class="gg-bolt"></i>
           </div>

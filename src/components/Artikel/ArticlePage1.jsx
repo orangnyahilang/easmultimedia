@@ -78,16 +78,11 @@ const ArticlePage1 = () => {
       <div className='back'>
       <FontAwesomeIcon icon={faAnglesLeft} style={{fontSize: '2rem', cursor: 'pointer', color: '#2471A3'}} onClick={handleBack} />
       </div>
-      <div class="loader">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-      </div>
+
 
 
       <div className='headerartikel'>
-        <h1>Pengenalan PHP</h1>
+        <h1>Konsep Dasar Pemrograman PHP</h1>
         <p className="meta">Published on December 10, 2023 by Team</p>
       </div>
       <img
@@ -100,208 +95,82 @@ const ArticlePage1 = () => {
       <article className="article-content">
         <h2><b>Pengenalan PHP:</b></h2>
         <p>
-        Apa itu PHP?
-PHP adalah singkatan dari "Hypertext Preprocessor". PHP adalah bahasa skrip sisi server yang dirancang khusus untuk pengembangan web, tetapi juga dapat digunakan sebagai bahasa umum pemrograman. PHP memungkinkan Anda menyisipkan kode di dalam dokumen HTML, yang kemudian dieksekusi oleh server web saat halaman diminta.
 
-Keuntungan Penggunaan PHP:
 
-Gratis: PHP adalah perangkat lunak sumber terbuka yang dapat diunduh dan digunakan tanpa biaya.
-Fleksibel: PHP bekerja pada berbagai platform dan dapat diintegrasikan dengan berbagai database, seperti MySQL.
-Mudah Dipelajari: PHP mudah dipelajari, terutama bagi mereka yang sudah memiliki pemahaman dasar tentang HTML.
-Dokumentasi Kuat: PHP memiliki dokumentasi yang baik dan aktif, yang memudahkan pengembang untuk mencari dan memahami fungsi-fungsi yang ada.
+        Selamat datang di Tutorial Belajar PHP untuk pemula..
+
+Banyak pemula yang bingung dan bertanya:
+
+“Gimana sih cara membuat web dengan PHP?”
+
+“Apa saja alat-alat yang diperlukan untuk coding PHP?”
+
+“Mengapa kita butuh PHP?”
+
+..dan masih banyak pertanyaan lainnya.
+
+Tentang..
+
+Kita akan mempelajarinya sampai paham.
+
+Mulai dari sejarah awal kemunculan PHP, sampai bisa paham konsep dasar pemrograman PHP.
+
+Siap?
+
+Pastikan kamu membaca sampai akhir ya.
+
+Mari kita mulai..
 <br/>
 <br/>
-<b>Cara Menggunakan PHP:</b>
+<strong>Asal usul kemunculan PHP</strong>
 <br/>
-Penyisipan Kode PHP:
+Pada zaman dulu.. Web itu statis, cuma dibuat dengan HTML dan sedit sentuhan CSS.
 
-Kode PHP dapat disisipkan di dalam tag HTML menggunakan delimiter (?php dan ?). Contoh:
+Waktu itu memang teknologi web masih belum secanggih sekarang.
 
-      <CodeEditor
-        value={`<?php\n  echo "Hello, World!";\n?>`}
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
+Jadi saat orang membuka web, mereka sebenarnya cuma membuka file HTML dari web server.
 
-Variabel dan Tipe Data:
+<br/>
+<br/>
+<img src='https://www.petanikode.com/img/php-konsep/web-statis.avif' alt=''/>
 
-Variabel digunakan untuk menyimpan nilai. Tipe data termasuk string, integer, float, boolean, dll. Contoh:
+Masalah waktu itu:
 
-      <CodeEditor
-        value={
-`$nama = "John";
-$umur = 25;
-$gaji = 1000.50;
-$sudahMenikah = false;`}
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
+Jika webnya statias, kita nggak bisa tau siapa saja yang buka dan berapa orang yang buka.
 
-Perulangan:
-
-Digunakan untuk mengulangi blok kode tertentu. Contoh:
+Karena itu, di tahun 1993.. Rasmus Lerdorf membuat bahasa pemrograman PHP.
 
 
-<CodeEditor
-        value={
-`for ($i = 1; $i <= 5; $i++) {
-  echo "Iterasi ke-$i <br>";
-}`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
+Awalnya PHP cuma dipakai sendiri oleh Rasmus Lerdorf, kemudian di-rilis ke publik di tahun 1995.
 
+Dulu PHP dikenal sebagai singkatan:
 
+PHP = Personal Home Page.
 
-Pernyataan Percabangan:
+Tapi makin ke sini, singkatan itu beubah menjad:
 
-Digunakan untuk mengambil keputusan berdasarkan kondisi tertentu. Contoh:
+PHP = PHP: Hypertext Preprocessor.
+<br/>
+<br/>
+<strong>Apa itu PHP?</strong>
+<br/>
+PHP adalaha bahasa pemrograman scripting yang berjalan pada server. PHP dikembangkan dengan bahasa C sehingga sintaksnya mirip-mirip dengan bahasa C.
 
-<CodeEditor
-        value={
-`function sapa($nama) {
-  echo "Halo, $nama!";
-}
-
-sapa("Budi");`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-      
-      Fungsi:
-
-Fungsi digunakan untuk mengelompokkan kode ke dalam blok yang dapat dipanggil kembali. Contoh:
-
-      
-<CodeEditor
-        value={
-`$umur = 18;
-if ($umur >= 18) {
-  echo "Anda sudah dewasa.";
-} else {
-  echo "Anda masih anak-anak.";
-}`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-      
-
-      Penggunaan Formulir:
-
-PHP dapat digunakan untuk memproses data formulir yang dikirim dari halaman HTML. Contoh:
-      
-<CodeEditor
-        value={
-`<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $nama = $_POST["nama"];
-  echo "Halo, $nama!";
-}
-?>
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-Nama: <input type="text" name="nama">
-<input type="submit" value="Submit">
-</form>`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
-
-
-Fungsi:
-
-Fungsi digunakan untuk mengelompokkan kode ke dalam blok yang dapat dipanggil kembali. Contoh:
-
-      
-<CodeEditor
-        value={
-`$servername = "localhost";
-$username = "username";
-$password = "password";
-$database = "nama_database";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-  die("Koneksi gagal: " . $conn->connect_error);
-}`
-        }
-        language="js"
-        placeholder="Please enter JS code."
-        onChange={(evn) => setCode(evn.target.value)}
-        style={{
-          backgroundColor: "#",
-          width: '50%',
-          padding: '5px',
-          marginTop: '0.8rem',
-          marginBottom: '0.8rem',
-          borderRadius: '1rem',
-          fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-        }}
-      />
+Jadi, jika kamu sudah belajar bahasa C sebelumnya, kamu akan mudah memahami sintaks PHP.
+<br/>
+<br/>
+<strong>Peralatan yang dibutuhkan untuk Coding PHP</strong>
+<br/>
+Ada 4 tiga alat yang perlu disiapkan untuk mulai coding PHP:
+<br/>
+<br/>
+1. PHP interpreter - program buat menjalankan PHP pada server
+<br/>
+2. Teks Editor - buat menulis kode PHP
+<br/>
+3. Web Server - service buat menjalankan PHP
+<br/>
+4. Web Browser - buat melihat atau membuka website
 
 
         </p>
@@ -318,12 +187,6 @@ if ($conn->connect_error) {
 
 
 
-      <div class="loading-wave">
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
-        <div class="loading-bar"></div>
-      </div>
 
 
       <div className='btn-next'>

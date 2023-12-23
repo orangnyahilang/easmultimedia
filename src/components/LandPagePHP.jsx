@@ -57,7 +57,7 @@ function LandPagePHP() {
         <h1>Apa saja yang perlu dipelajari bagi pemula?</h1>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          Pengenalan PHP
+          Konsep Dasar PHP
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -65,7 +65,7 @@ function LandPagePHP() {
       </Link>
       <Link to='tutorial2'>
       <div className='buttonlist'>
-          Panduan Pengguna
+          Instalasi dan Konfigurasi PHP
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -73,7 +73,7 @@ function LandPagePHP() {
       </Link>
       <Link to='tutorial3'>
       <div className='buttonlist'>
-          Referensi Function
+          Struktur Dasar PHP
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -81,7 +81,7 @@ function LandPagePHP() {
       </Link>
       <Link to='tutorial4'>
       <div className='buttonlist'>
-          Pengelolaan Ekstensi
+          Tipe Data dan variabel PHP
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -89,7 +89,7 @@ function LandPagePHP() {
       </Link>
       <Link to='tutorial5'>
       <div className='buttonlist'>
-          PDO (PNP Data Object)
+          Operator di PHP
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -97,15 +97,7 @@ function LandPagePHP() {
       </Link>
       <Link to='tutorial6'>
       <div className='buttonlist'>
-          Object Oriented Programming
-          <div class="arrow-wrapper">
-              <div class="arrow"></div>
-          </div>
-      </div>
-      </Link>
-      <Link to='tutorial7'>
-      <div className='buttonlist'>
-          Pemrograman Web
+          Prosedur dan Fungsi PHP
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
@@ -118,7 +110,7 @@ function LandPagePHP() {
       <img src={bg1element} />
     </div>
 
-    <div className='ball3'>
+    {/* <div className='ball3'>
         <div class="loader">
           <div class="loader__balls">
             <div class="loader__balls__group">
@@ -138,14 +130,15 @@ function LandPagePHP() {
             </div>
           </div>
         </div>
-    </div>
+    </div> */}
     
-    <div class="typewriter">
+    {/* <div class="typewriter">
         <div class="slide"><i></i></div>
         <div class="paper"></div>
         <div class="keyboard"></div>
-    </div>
-    <div className='ploader'>
+    </div> */}
+
+    {/* <div className='ploader'>
     <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
       <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
       <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
@@ -166,7 +159,7 @@ function LandPagePHP() {
         <div class="slider">
         </div>
       </section>
-    </div>
+    </div> */}
 
     </div>
     </>
