@@ -39,8 +39,8 @@ function LandPageSQL() {
         mencakup pemahaman tentang struktur tabel, manipulasi data, pertanyaan dan pemilihan data, pengelolaan indeks, transaksi, keamanan, optimasi kueri, dan penanganan error.
         </p>
         
-        <div className='buttong1' onClick={handleClick}>
-          <span>GET STARTED</span>
+        <div className='buttong1'>
+          <span><Link to='tutorial1'>Mulai Belajar</Link></span>
         </div>
     
         </div>
@@ -50,67 +50,53 @@ function LandPageSQL() {
           <img src={sql} alt="" /> 
         </div>
     </div>
-    <div className="bottom-arrow-container" onClick={handleClick}>
-        <FontAwesomeIcon icon={faAnglesDown} className="arrow-icon" />
-    </div>    
+    
     <div className='grid2' id='list'>
         <h1>Apa saja yang perlu dipelajari bagi pemula?</h1>
       <Link to='tutorial1'>
       <div className='buttonlist'>
-          Pengenalan MySQL
+          Cara Penggunaan JOIN
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
       </div>
       </Link>
-      <Link to='tutorial1'>
       <div className='buttonlist'>
-          Instalasi dan Konfigurasi
+          Cara Membuat Stored Prosedur
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
       </div>
-      </Link>
-      <Link to='tutorial1'>
       <div className='buttonlist'>
-          Operasi CRUD
+          Cara Membuat View
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
       </div>
-      </Link>
-      <Link to='tutorial1'>
       <div className='buttonlist'>
-          Query SQL
+          Cara Membuat Trigger
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
       </div>
-      </Link>
-      <Link to='tutorial1'>
       <div className='buttonlist'>
-          Security
+          Memahami DDL
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
       </div>
-      </Link>
-      <Link to='tutorial1'>
       <div className='buttonlist'>
-          Replikasi dan Pengolahan
+          Memahami DML 
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
       </div>
-      </Link>
-      <Link to='tutorial1'>
       <div className='buttonlist'>
-          Penyelarasan Performa
+          Memahami DQL
           <div class="arrow-wrapper">
               <div class="arrow"></div>
           </div>
       </div>
-      </Link>
     </div>
 
     <div className='gridelement1'>
@@ -118,30 +104,29 @@ function LandPageSQL() {
       <img src={bg1element} />
     </div>
 
-    <div className='ball3'>
-    <div class="loader">
-  <div class="loader__balls">
-    <div class="loader__balls__group">
-      <div class="ball item1"></div>
-      <div class="ball item1"></div>
-      <div class="ball item1"></div>
-    </div>
-    <div class="loader__balls__group">
-      <div class="ball item2"></div>
-      <div class="ball item2"></div>
-      <div class="ball item2"></div>
-    </div>
-    <div class="loader__balls__group">
-      <div class="ball item3"></div>
-      <div class="ball item3"></div>
-      <div class="ball item3"></div>
-    </div>
-  </div>
-</div>
-
-    </div>
+    {/* <div className='ball3'>
+      <div class="loader">
+        <div class="loader__balls">
+          <div class="loader__balls__group">
+            <div class="ball item1"></div>
+            <div class="ball item1"></div>
+            <div class="ball item1"></div>
+          </div>
+          <div class="loader__balls__group">
+            <div class="ball item2"></div>
+            <div class="ball item2"></div>
+            <div class="ball item2"></div>
+          </div>
+          <div class="loader__balls__group">
+            <div class="ball item3"></div>
+            <div class="ball item3"></div>
+            <div class="ball item3"></div>
+          </div>
+        </div>
+      </div>
+    </div> */}
     
-    <div class="typewriter">
+    {/* <div class="typewriter">
         <div class="slide"><i></i></div>
         <div class="paper"></div>
         <div class="keyboard"></div>
@@ -153,8 +138,8 @@ function LandPageSQL() {
       <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
       <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
     </svg>
-    </div>
-    <div className='loaderfourspellposition'>
+    </div> */}
+    {/* <div className='loaderfourspellposition'>
       <section class="loaderfourspell">
         <div class="slider">
         </div>
@@ -167,7 +152,7 @@ function LandPageSQL() {
         <div class="slider">
         </div>
       </section>
-    </div>
+    </div> */}
     
     </div>
   )

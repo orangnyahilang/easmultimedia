@@ -11,6 +11,7 @@ import Testing from './components/testing';
 import ArticlePage6 from './components/Artikel/ArticlePage6';
 import ArticlePage5 from './components/Artikel/ArticlePage5';
 import ArticlePage4 from './components/Artikel/ArticlePage4';
+import ArticlePage1sql from './components/Artikel/ArticlePage1sql';
 
 function App() {
   return (
@@ -29,7 +30,12 @@ function App() {
           <Route path="/phplanding/tutorial5" element={<ArticlePage5/>} />
           <Route path="/phplanding/tutorial6" element={<ArticlePage6/>} />
 
-          <Route path="/sqllanding/tutorial1" element={<ArticlePage1/>} />
+          <Route path="/sqllanding/tutorial1" element={<ArticlePage1sql/>} />
+          <Route path="/sqllanding/tutorial2" element={<ArticlePage2/>} />
+          <Route path="/sqllanding/tutorial3" element={<ArticlePage3/>} />
+          <Route path="/sqllanding/tutorial4" element={<ArticlePage4/>} />
+          <Route path="/sqllanding/tutorial5" element={<ArticlePage5/>} />
+          <Route path="/sqllanding/tutorial6" element={<ArticlePage6/>} />
 
           <Route path="/tes" element={<Testing/>} />
 

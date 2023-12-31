@@ -1,6 +1,7 @@
 // HalamanUtama.jsx
 import React, { useState, useEffect } from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 import bg1 from '../assets/images/bg1.png'
 import GridPHP from './GridPHP';
 
@@ -88,6 +89,8 @@ const Home = () => {
           </div>
         </div>
         <div className="grid2">
+          
+        <Link to='mailto:aryasatyaibnusani@gmail.com'>
           <button className='buttong2'>
               <div class="svg-wrapper-1">
                 <div class="svg-wrapper">
@@ -105,8 +108,9 @@ const Home = () => {
                   </svg>
                 </div>
               </div>
-              <span>Help</span>
+              <span>Email</span>
             </button>
+              </Link>
 
           {/* Grid 2 */}
           {/* Isi sesuai kebutuhan */}
